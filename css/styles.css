@@ -22,6 +22,8 @@ body {
 }
 
 #displayTimer {
-    display: inline;
+    display: inline-block;
     font-size: 48px;
+    top: 70px;
+    position: relative;
 }
