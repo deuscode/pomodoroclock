@@ -16,9 +16,8 @@ body {
 .rightMenu {
     width: 300px;
     height: 300px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 25%;
 }
 
 .timerLength {
@@ -28,6 +27,24 @@ body {
     text-align: center;
     display: inline-block;
     border-radius: 150px;
+}
+
+.breakLength {
+    width: 50px;
+    height: 50px;
+    background: rgba(93, 93, 234, 0.89);
+    text-align: center;
+    border-radius: 150px;
+    float: right;
+}
+
+.resetTimer {
+    width: 50px;
+    height: 50px;
+    background: rgba(93, 93, 234, 0.89);
+    text-align: center;
+    border-radius: 150px;
+    margin: 0 auto;
 }
 
 #startTimer {
