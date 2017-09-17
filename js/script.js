@@ -18,6 +18,6 @@ function activateTimer() {
 function startTimer() {
     var count;
     if (timerState.style.zIndex == '-1') {
-        
+
     }
 }
