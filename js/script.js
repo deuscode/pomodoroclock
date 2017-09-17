@@ -2,7 +2,6 @@
 var mainTimer = document.getElementById('startTimer');
 var timerState = document.getElementById('displayTimer');
 var currentTimer = document.getElementById('displayTimer').innerHTML;
-console.log(currentTimer);
 
 // Event handler for user clicks on main timer
 mainTimer.addEventListener('click', activateTimer);
@@ -17,7 +16,8 @@ function activateTimer() {
 }
 
 function startTimer() {
+    var count;
     if (timerState.style.zIndex == '-1') {
-
+        
     }
 }
