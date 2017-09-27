@@ -16,12 +16,10 @@ function activateTimer() {
 
 }
 
-function startTimer() {
-    var count;
+var startTimer = setInterval(function() {
     if (timerState.style.zIndex == '1' || count === 0) {
-        // timer ends
+        clearInterval(startTimer);
     } else {
         count--;
-        t = setTimeout(startTimer, 1000);
     }
-}
+}, 1000);
