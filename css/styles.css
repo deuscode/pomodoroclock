@@ -65,6 +65,15 @@ body {
     margin: 0 auto;
 }
 
+.resetButton {
+    height: 50px;
+    margin-top: -20px;
+    background: rgba(255, 98, 98, 0.89);
+    border-radius: 150px;
+
+    color: black;
+}
+
 #startTimer {
     display: block;
     width: 300px;
