@@ -12,6 +12,10 @@ var breakSubtract = document.getElementById('breakSubtract');
 
 // alertSound.play();
 
+
+
+
+
 // Event handler for user clicks on main timer
 mainTimer.addEventListener('click', activateTimer);
 
