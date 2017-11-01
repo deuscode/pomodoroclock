@@ -81,11 +81,38 @@ body {
     border-radius: 150px;
 }
 
+#timerAdd, #breakAdd {
+    height: 25px;
+    width: 50px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    position: absolute;
+    display: block;
+}
+
+#timerSubtract, #breakSubtract {
+    height: 25px;
+    width: 50px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    position: absolute;
+    display: block;
+}
+
 #displayTimer {
     display: inline-block;
     font-size: 48px;
     top: 110px;
     position: relative;
+    z-index: -1;
+}
+
+#displayBreak {
+    display: inline-block;
+    font-size: 36px;
+    position: absolute;
+    top: 240px;
+    margin-left: -95px;
     z-index: -1;
 }
 
