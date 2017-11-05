@@ -1,1 +1,6 @@
 .vscode/
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/config/applicationhost.config
+.vs/pomodoroclock/v15/.suo
