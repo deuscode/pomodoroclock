@@ -62,12 +62,11 @@ function activateTimer(event) {
 
 // Event handlers for incrementing idle timer
 timerAdd.addEventListener("click", function(event) {
+  count += 1;
   if (count < 10) {
-    count += 1;
     timerState.innerHTML = timerState.innerHTML = "0" + count + ":00";
   }
   if (count >= 10) {
-    count += 1;
     timerState.innerHTML = timerState.innerHTML = count + ":00";
   }
   event.preventDefault();
