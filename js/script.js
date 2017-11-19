@@ -29,36 +29,39 @@ function activateTimer(event) {
 
     // Format timer to minutes and seconds
     function timer() {
-      count -= 1;
-      if (count === 0) {
-        alertSound.play();
-        clearInterval(counter);
-        var breakCounter = setInterval(breakTimer);
-      }
-      timerState.innerHTML = count;
-      if (Math.floor(count / 60) > 10) {
-        if (count % 60 >= 10) {
-          timerState.innerHTML = Math.floor(count / 60) + ":" + count % 60;
-        } else {
-          timerState.innerHTML =
-            "0" + Math.floor(count / 60) + ":" + "0" + count % 60;
+      if (timerState.style.zIndex == "1") {
+        count -= 1;
+        if (count === 0) {
+          alertSound.play();
+          clearInterval(counter);
+          var breakCounter = setInterval(breakTimer);
         }
-      } else {
-        if (count % 60 >= 10) {
-          timerState.innerHTML =
-            "0" + Math.floor(count / 60) + ":" + count % 60;
+        timerState.innerHTML = count;
+        if (Math.floor(count / 60) > 10) {
+          if (count % 60 >= 10) {
+            timerState.innerHTML = Math.floor(count / 60) + ":" + count % 60;
+          } else {
+            timerState.innerHTML =
+              Math.floor(count / 60) + ":" + "0" + count % 60;
+          }
         } else {
-          timerState.innerHTML =
-            "0" + Math.floor(count / 60) + ":" + "0" + count % 60;
+          if (count % 60 >= 10) {
+            timerState.innerHTML =
+              "0" + Math.floor(count / 60) + ":" + count % 60;
+          } else {
+            timerState.innerHTML =
+              "0" + Math.floor(count / 60) + ":" + "0" + count % 60;
+          }
         }
-      }
 
-      // Format break timer to minutes and seconds
-      function breakTimer() {}
+        // Format break timer to minutes and seconds
+        function breakTimer() {}
+      } else {
+        clearInterval(counter);
+        timerState.style.zIndex = "-1";
+        breakState.style.zIndex = "-1";
+      }
     }
-  } else {
-    timerState.style.zIndex = "-1";
-    breakState.style.zIndex = "-1";
   }
   event.preventDefault();
 }
