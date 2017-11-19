@@ -58,10 +58,11 @@ function activateTimer(event) {
         function breakTimer() {}
       } else {
         clearInterval(counter);
-        timerState.style.zIndex = "-1";
-        breakState.style.zIndex = "-1";
       }
     }
+  } else {
+    timerState.style.zIndex = "-1";
+    breakState.style.zIndex = "-1";
   }
   event.preventDefault();
 }
@@ -70,10 +71,10 @@ function activateTimer(event) {
 timerAdd.addEventListener("click", function(event) {
   count += 1;
   if (count < 10) {
-    timerState.innerHTML = timerState.innerHTML = "0" + count + ":00";
+    timerState.innerHTML = count = "0" + count + ":00";
   }
   if (count >= 10) {
-    timerState.innerHTML = timerState.innerHTML = count + ":00";
+    timerState.innerHTML = count + ":00";
   }
   event.preventDefault();
 });
