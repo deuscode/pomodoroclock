@@ -9,6 +9,7 @@ var timerAdd = document.getElementById("timerAdd");
 var timerSubtract = document.getElementById("timerSubtract");
 var breakAdd = document.getElementById("breakAdd");
 var breakSubtract = document.getElementById("breakSubtract");
+var clickCount = 0;
 
 // Event handler for user clicks on main timer
 mainTimer.addEventListener("click", activateTimer);
@@ -18,9 +19,13 @@ function activateTimer(event) {
   if (timerState.style.zIndex == "-1") {
     timerState.style.zIndex = "1";
     breakState.style.zIndex = "1";
+    clickCount++;
 
     var counter = setInterval(timer, 1000);
-    count *= 60;
+
+    if (clickCount <= 1) {
+      count *= 60;
+    }
 
     // Format timer to minutes and seconds
     function timer() {
@@ -49,9 +54,7 @@ function activateTimer(event) {
       }
 
       // Format break timer to minutes and seconds
-      function breakTimer() {
-
-      }
+      function breakTimer() {}
     }
   } else {
     timerState.style.zIndex = "-1";
